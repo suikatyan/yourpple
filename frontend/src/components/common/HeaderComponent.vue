@@ -23,20 +23,15 @@
 </template>
 
 <script>
-import theme from '@/utils/theme';
-import Config from '@/utils/config';
-import CONFIG_KEYS from '@/constants/configKeys';
-
 export default {
   computed: {
     isLightMode() {
-      return theme.isLightMode(this.$vuetify);
+      return this.$store.getters['config/theme/dark'];
     },
   },
   methods: {
     toggleMode() {
-      const isDarkMode = theme.toggleMode(this.$vuetify);
-      Config.set(isDarkMode, CONFIG_KEYS.DARK_MODE);
+      this.$store.commit('config/theme/toggleDarkMode', this.$vuetify);
     },
   },
 };

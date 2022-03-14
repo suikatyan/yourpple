@@ -23,6 +23,10 @@ export default {
     HeaderComponent,
     FooterComponent,
   },
+  created() {
+    this.$vuetify.lang.current = this.$store.getters['config/language/current'];
+    this.$vuetify.theme.dark = this.$store.getters['config/theme/dark'];
+  },
 };
 </script>
 
