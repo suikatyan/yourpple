@@ -21,7 +21,6 @@
 import axios from 'axios';
 import URLS from '@/constants/urls';
 import alerter from '@/utils/alerter';
-import { getUrl } from '@/utils/getUrl';
 import LoadingDialog from '@/components/common/LoadingDialog.vue';
 
 export default {
@@ -46,7 +45,7 @@ export default {
         }
       }
 
-      const response = await axios.post(getUrl(URLS.LOGIN_CALLBACK), this.$route.query);
+      const response = await axios.post(URLS.LOGIN_CALLBACK, this.$route.query);
       if (response.data.success) {
         alerter.showImidiate({
           text: this.$vuetify.lang.t('$vuetify.alert.loggedIn'),

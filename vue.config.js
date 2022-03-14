@@ -4,6 +4,7 @@ const path = require('path');
 module.exports = defineConfig({
   transpileDependencies: [
     'vuetify',
+    'vuex-persist',
   ],
   configureWebpack: {
     watchOptions: {

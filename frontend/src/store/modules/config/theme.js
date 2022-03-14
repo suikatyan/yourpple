@@ -1,7 +1,7 @@
 export default {
   namespaced: true,
   state: {
-    dark: false,
+    dark: true,
   },
   getters: {
     dark: (state) => state.dark,
