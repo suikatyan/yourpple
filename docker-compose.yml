@@ -19,8 +19,10 @@ services:
     volumes:
       - ./backend:/work/backend
       - ./.env:/work/backend/.env
+      - laravel-vendor-volume:/work/backend/vendor
     depends_on:
       - db
+      - redis
 
   db:
     build:
@@ -36,6 +38,15 @@ services:
     volumes:
       - mysql-volume:/var/lib/mysql
 
+  redis:
+    build:
+      context: .
+      dockerfile: ./docker/redis/Dockerfile
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-volume:/data
+
   frontend:
     build:
       context: .
@@ -46,8 +57,10 @@ services:
     volumes:
       - .:/work
       - node-modules-volume:/work/node_modules
-    command: "yarn serve"
+    tty: true
 
 volumes:
   mysql-volume:
+  laravel-vendor-volume:
   node-modules-volume:
+  redis-volume:

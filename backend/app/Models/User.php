@@ -18,9 +18,11 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'twitter_id',
         'name',
-        'email',
-        'password',
+        'nickname',
+        'avatar',
+        'last_authencated_date',
     ];
 
     /**
@@ -28,10 +30,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast.
@@ -39,6 +38,18 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'last_authencated_date' => 'datetime',
     ];
+
+    /**
+     * TwitterIDのスコープを設定
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  int  $id
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeTwitterId($query, $id)
+    {
+        return $query->where('twitter_id', $id);
+    }
 }

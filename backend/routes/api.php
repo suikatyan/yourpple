@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get("/refresh-csrf", [CsrfCookieController::class, "show"]);
+
+Route::post("/login", [LoginController::class, "login"]);
+Route::post("/login/callback", [LoginController::class, "callback"]);
+Route::post("/logout", [LoginController::class, "logout"]);
+
+Route::group(["middleware" => ["auth:sanctum"]], function () {
+
 });

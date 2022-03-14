@@ -11,7 +11,7 @@ module.exports = defineConfig({
     },
     resolve: {
       alias: {
-        '@': path.join(__dirname, './frontend/src'),
+        '@': path.join(__dirname, 'frontend/src'),
       },
     },
   },
@@ -26,5 +26,8 @@ module.exports = defineConfig({
       title: 'title',
       chunks: ['chunk-vendors', 'chunk-common', 'index'],
     },
+  },
+  devServer: {
+    allowedHosts: 'all',
   },
 });

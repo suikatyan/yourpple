@@ -7,7 +7,27 @@ const routes = [
   {
     path: '/',
     name: 'top',
-    component: () => import(/* webpackChunkName: "about" */ '../views/TopView.vue'),
+    component: () => import(/* webpackChunkName: "top" */ '@/views/TopView.vue'),
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "login" */ '@/views/LoginView.vue'),
+  },
+  {
+    path: '/login-callback',
+    name: 'loginCallback',
+    component: () => import(/* webpackChunkName: "loginCallback" */ '@/views/LoginCallbackView.vue'),
+  },
+  {
+    path: '/my-page',
+    name: 'myPage',
+    component: () => import(/* webpackChunkName: "myPage" */ '@/views/MyPageView.vue'),
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "about" */ '@/views/AboutView.vue'),
   },
 ];
 
