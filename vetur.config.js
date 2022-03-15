@@ -23,10 +23,7 @@ module.exports = {
       // If you set it, you can get completion by that components.
       // It is relative to root property.
       // Notice: It won't actually do it. You need to use `require.context` or `Vue.component`
-      globalComponents: [
-        './frontend/src/components/*.vue',
-        './frontend/src/components/**/*.vue',
-      ],
+      globalComponents: [],
     },
   ],
 };

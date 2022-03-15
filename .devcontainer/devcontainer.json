@@ -1,11 +1,17 @@
 {
 	"name": "frontend container",
 	"dockerComposeFile": [
-		"../docker-compose.yml"
+		"../docker-compose.yml",
+		"./docker-compose.yml"
 	],
 	"service": "frontend",
 	"workspaceFolder": "/work/",
-	"settings": {},
+	"settings": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"vetur.experimental.templateInterpolationService": true,
+	},
 	"extensions": [
 		"dbaeumer.vscode-eslint",
 		"octref.vetur",

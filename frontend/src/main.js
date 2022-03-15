@@ -25,5 +25,5 @@ authAxios.register((error) => {
   return Promise.reject(error);
 });
 
-axios.defaults.baseURL = process.env.VUE_APP_BASE_URL;
+axios.defaults.baseURL = process.env.VUE_APP_API_BASE_URL;
 axios.defaults.withCredentials = true;
