@@ -1,14 +1,9 @@
 <template>
-  <div>
-    top component
-  </div>
+  <div>top component</div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

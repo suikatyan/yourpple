@@ -8,8 +8,7 @@ export default {
   getters: {
     current: (state) => state.current,
   },
-  actions: {
-  },
+  actions: {},
   mutations: {
     current(state, { vuetify, language }) {
       vuetify.lang.current = language;

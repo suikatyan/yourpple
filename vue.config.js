@@ -2,10 +2,7 @@ const { defineConfig } = require('@vue/cli-service');
 const path = require('path');
 
 module.exports = defineConfig({
-  transpileDependencies: [
-    'vuetify',
-    'vuex-persist',
-  ],
+  transpileDependencies: ['vuetify', 'vuex-persist'],
   configureWebpack: {
     watchOptions: {
       poll: true,

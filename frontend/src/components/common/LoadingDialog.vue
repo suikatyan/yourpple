@@ -1,18 +1,11 @@
 <template>
-  <v-dialog
-    v-model="show"
-    persistent
-    max-width="290"
-  >
+  <v-dialog v-model="show" persistent max-width="290">
     <v-card>
       <v-card-title>
         {{ dataMessage }}
       </v-card-title>
       <v-card-text>
-        <v-progress-linear
-          color="primary"
-          indeterminate
-        ></v-progress-linear>
+        <v-progress-linear color="primary" indeterminate></v-progress-linear>
       </v-card-text>
     </v-card>
   </v-dialog>
@@ -23,6 +16,7 @@ export default {
   props: {
     message: {
       type: String,
+      default: '',
     },
     value: {
       type: Boolean,
@@ -31,7 +25,9 @@ export default {
   },
   data() {
     return {
-      dataMessage: this.message ? this.message : this.$vuetify.lang.t('$vuetify.common.loadingDialog.message'),
+      dataMessage: this.message
+        ? this.message
+        : this.$vuetify.lang.t('$vuetify.common.loadingDialog.message'),
     };
   },
   computed: {
@@ -47,6 +43,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

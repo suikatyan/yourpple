@@ -6,9 +6,7 @@ export default {
   getters: {
     dark: (state) => state.dark,
   },
-  actions: {
-
-  },
+  actions: {},
   mutations: {
     activateDarkMode(state, vuetify) {
       state.dark = true;

@@ -18,18 +18,12 @@ const vuexPersistence = new VuexPersistence({
 
 export default new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+  state: {},
+  getters: {},
+  mutations: {},
+  actions: {},
   modules: {
     config,
   },
-  plugins: [
-    vuexPersistence.plugin,
-  ],
+  plugins: [vuexPersistence.plugin],
 });

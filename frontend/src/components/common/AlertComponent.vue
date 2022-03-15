@@ -39,8 +39,7 @@ export default {
       alerter.show();
       next();
     });
-    this.$router.afterEach(() => {
-    });
+    this.$router.afterEach(() => {});
   },
 };
 </script>

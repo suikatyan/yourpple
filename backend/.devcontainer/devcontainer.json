@@ -1,0 +1,14 @@
+{
+	"name": "backend container",
+
+	"dockerComposeFile": [
+		"../../docker-compose.yml"
+	],
+	"service": "app",
+	"workspaceFolder": "/work/backend",
+	"settings": {},
+	"extensions": [
+		"bmewburn.vscode-intelephense-client",
+		"ctf0.laravel-goto-controller"
+	]
+}

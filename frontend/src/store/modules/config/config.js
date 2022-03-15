@@ -3,14 +3,10 @@ import language from '@/store/modules/config/language';
 
 export default {
   namespaced: true,
-  state: {
-  },
-  getters: {
-  },
-  actions: {
-  },
-  mutations: {
-  },
+  state: {},
+  getters: {},
+  actions: {},
+  mutations: {},
   modules: {
     theme,
     language,

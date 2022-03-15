@@ -1,9 +1,5 @@
 <template>
-  <v-app-bar
-    app
-    color="primary"
-    dark
-  >
+  <v-app-bar app color="primary" dark>
     <v-app-bar-title>
       <h1>
         {{ $vuetify.lang.t('$vuetify.title') }}
@@ -12,10 +8,7 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn
-      icon
-      @click="toggleMode"
-    >
+    <v-btn icon @click="toggleMode">
       <v-icon v-if="isLightMode">fas fa-moon</v-icon>
       <v-icon v-else>fas fa-sun</v-icon>
     </v-btn>
@@ -37,6 +30,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

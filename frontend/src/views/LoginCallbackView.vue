@@ -39,7 +39,9 @@ export default {
       this.errorCode = this.$route.query.error;
       if (this.errorCode) {
         if (this.errorCode === 'access_denied') {
-          this.message = this.$vuetify.lang.t('$vuetify.loginCallback.accessDenied');
+          this.message = this.$vuetify.lang.t(
+            '$vuetify.loginCallback.accessDenied'
+          );
         } else {
           this.message = '';
         }
@@ -68,6 +70,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
