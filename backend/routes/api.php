@@ -17,5 +17,4 @@ use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 Route::get("/refresh-csrf", [CsrfCookieController::class, "show"]);
 
 Route::group(["middleware" => ["auth:sanctum"]], function () {
-
 });

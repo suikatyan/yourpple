@@ -10,3 +10,4 @@ docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 /.idea
+/.php-cs-fixer.cache

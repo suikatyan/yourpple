@@ -12,7 +12,8 @@ class LoginController extends Controller
 {
     private $driver = 'twitter-oauth-2';
 
-    public function login() {
+    public function login()
+    {
         $url = Socialite::driver($this->driver)
             ->scopes(['follows.read', 'tweet.read', 'follows.read'])
             ->redirect()
@@ -26,7 +27,8 @@ class LoginController extends Controller
         );
     }
 
-    public function callback() {
+    public function callback()
+    {
         $twitterUser = Socialite::driver($this->driver)->user();
         $user = User::twitterId($twitterUser->getId())->first();
 
@@ -56,7 +58,8 @@ class LoginController extends Controller
         ];
     }
 
-    public function logout() {
+    public function logout()
+    {
         return [
             'success' => true,
         ];
